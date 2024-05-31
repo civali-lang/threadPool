@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.java": "java",
+        "atomic": "cpp",
+        "condition_variable": "cpp"
+    }
+}

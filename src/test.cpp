@@ -1,6 +1,7 @@
 #include "Singleton1.hpp"
 #include "Singleton2.hpp"
 #include "Singleton3.hpp"
+#include "Sun.hpp"
 #include "TreadPool.hpp"
 void test1();
 void test2();
@@ -11,6 +12,7 @@ int main() {
     // test1();
     // test2();
     // test3();
+    // Sun* sun = new Sun();
     testThreadPool(30);
     return 0;
 }
@@ -52,7 +54,7 @@ void test3() {
 }
 // 测试函数，创建n个任务并交给线程池
 void testThreadPool(unsigned int n) {
-    unsigned int threads = std::thread::hardware_concurrency();  // 获取硬件支持的线程数
+    unsigned int threads = 4;  // 获取硬件支持的线程数
     ThreadPool& pool = ThreadPool::getInstance(threads);
     static std::mutex cout_mutex;
     // 创建并添加n个任务到线程池
